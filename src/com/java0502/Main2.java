@@ -18,6 +18,10 @@ public class Main2 extends HttpServlet {
 		//url : http://localhost:8080/201905/Main2?a=1&b=2 파라미터 두 개. 물음표는 변수를 보내려고. 그 뒤에 오는 게 파라미터. 파라미터로 웹 주소에 붙여 보낼 때는 정수가 아니라 문자열이다. 커리스트링이라고 함.
 		String a = request.getParameter("a"); //a라는 변수. a의 값은 1이다. 클라이언트가 변수를 만들어 주소에 보냄. 
 		String b = request.getParameter("b"); // b라는 변수 = 2
+		String cc = request.getParameter("c");
+		
+		System.out.println(cc);
+	
 		
 		int c =  Integer.parseInt(a) + Integer.parseInt(b); //3
 		System.out.println(c);
@@ -29,6 +33,8 @@ public class Main2 extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	doGet(request, response);
 	}
+	
 
 }
