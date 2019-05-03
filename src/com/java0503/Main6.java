@@ -35,7 +35,7 @@ public class Main6 extends HttpServlet {
 //		}
 		
 		HashMap<String, Object> resultMap = new HashMap<String, Object>();
-		resultMap.put("이름", "파란쥐"); //map에는 key가  있고 자바빈에는 set get이라는 메소드가 있다
+		resultMap.put("이름", "파란쥐"); //map에는 key가  있고 자바빈에는 set get이라는 메소드가 있다. 고정적인 자바 빈에 비해 유동적으로 쓰인다. 키를 순서 있게 만들면 list와 비슷해짐. value값으로 해시맵을 넣어서 트리 구조의 데이터베이스를 만들 수 있다.
 		resultMap.put("나이", 1);
 		resultMap.put("몸무게", 1000);
 		resultMap.put("키", 2);
@@ -44,11 +44,10 @@ public class Main6 extends HttpServlet {
 		String 이름 = resultMap.get("이름").toString();
 		System.out.println(이름);
 		
-		
 	
 		
 		
-		List<사용자> 사용자목록 = new ArrayList<사용자>(); //객체를 배열로 다룰 때 쓴다
+		List<사용자> 사용자목록 = new ArrayList<사용자>(); //객체를 배열 형식으로 다룰 때 쓴다. 순서가 있다.
 		사용자목록.add(new 사용자("파란쥐", 1, 2, 1000));  //0번 인덱스 위치에 사용자 객체 담기
 		사용자목록.add(new 사용자("빨간고양이", 28, 181, 75));//1번 인덱스 위치에 사용자 객체 담기
 		
